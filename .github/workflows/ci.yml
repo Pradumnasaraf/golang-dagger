@@ -18,5 +18,6 @@ jobs:
         uses: dagger/dagger-for-github@8.0.0
         with:
           version: latest
-          call: test --source .
+          # build-and-test is a function in the .dagger/dagger.gen.go file
+          call: build-and-test --source .
           cloud-token: ${{ secrets.DAGGER_CLOUD_TOKEN }}
